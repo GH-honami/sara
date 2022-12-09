@@ -1,0 +1,115 @@
+header {
+    background-color: #010101;
+    height: 90px;
+    margin: -8px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+body {
+	background-color: #010101;
+}
+
+.header-logo {
+    color: #fbfdfd;
+    font-size: 25px;
+    margin: 15px 25px;
+}
+
+@media (min-width: 370px) {
+    .header-logo {
+      font-size: 16px;
+    }
+  }
+
+.header_img {
+    height: 95px;
+    margin: 0px 0px;
+    max-width: 100%;
+	height: auto;
+}
+
+#lp-fv {
+    content: '';
+    background: url(images/lp1-mesh.png) no-repeat center / contain,url(images/lp1.svg) no-repeat center / contain;
+    display: block;
+    background-position: center;
+}
+
+.main {
+    height: 370px;
+}
+
+h2 {
+    color: #ebc6c6;
+    margin: 90px 0px;
+    text-align: center;
+}
+
+p {
+    color: #ebc6c6;
+    margin: 70px 0px 30px 0px;
+    text-align: center;
+}
+
+.answer {
+    color: #ebc6c6;
+    margin: 70px 0px 30px 0px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+
+input {
+    width: 300px
+}
+input[type="file"]::file-selector-button {
+    width: 150px;
+    margin-right: 20px;
+    border: none;
+    background: -moz-linear-gradient(left, #ff7895 50%, #84ede3);
+    background: -webkit-linear-gradient(left, #ff7895 50%, #84ede3);
+    background: linear-gradient(to right, #ff7895 50%, #84ede3);
+    padding: 10px 20px;
+    margin: 0 10px 0 0;
+    border: outset #b9afb4;
+    border-radius: 30px;
+    color: #31ed62;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .btn {
+    width: 75px;
+    padding: 10px 20px;
+    color: #31ed62;
+    background: -moz-linear-gradient(left, #eff738 50%, #f7a034);
+    background: -webkit-linear-gradient(left, #eff738 50%, #f7a034);
+    background: linear-gradient(to right, #eff738 50%, #f7a034);
+    border: outset #b9afb4;
+    border-radius: 30px;
+  }
+
+footer {
+    background-color: #010006;
+    height: 110px;
+    margin: -8px;
+    position: relative;
+}
+
+.footer_img {
+    height: 105px;
+    margin: 0px 0px;
+}
+
+small {
+    color: #f0ebeb;
+    margin: 0px 90px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

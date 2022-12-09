@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Baby Alert</title>
+    <link rel="stylesheet" href="./static/stylesheet.css">
+</head>
+<body>
+    <header>     
+        <img class="header_img" src="static/images/header_img.jpg" alt="header_img">
+        <a class="header-logo" href="#">Baby Alert</a>
+    </header>
+    <main>
+        <img src="static/images/lp-overlap.png" id="lp-fv" alt="main_img">
+        
+        <h2>AIが送信された赤ちゃんの画像の危険を識別します</h2>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+        <div id='title'>
+            <span>
+                Upload your photos
+            </span>
+        </div>
+    
+        <!-- <form method="POST" style="margin:30px 0px;", enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <input class="btn" value="submit!" type="submit" />
+        </form> -->
+        <form method="POST" enctype="multipart/form-data">
+            <input class="file_choose" type="file" name="file">
+            <input class="btn" value="submit!" type="submit">
+        </form>
+        <div class="answer">{{answer}}</div>
+        <div class="up_img">
+            {% if filepath %}
+                <img class="filepath" src={{filepath}} height="200">
+            {% endif %}
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <img class="footer_img" src="static/images/footer_img.jpg" alt="footer_img">
+        <small>&copy; 2022 Aidemy_Honami</small>   
+    </footer>
+</body>
+</html>
