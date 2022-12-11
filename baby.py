@@ -18,7 +18,7 @@ app = Flask(__name__)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-model = load_model('./model.h5')#学習済みモデルをロード
+model = load_model('./my_model.h5')#学習済みモデルをロード
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -39,14 +39,17 @@ def upload_file():
             #受け取った画像を読み込み、np形式に変換
             img = image.load_img(filepath, grayscale=False, target_size=(image_size, image_size))
             img = image.img_to_array(img)
+
+
             data = np.array([img])
             result = model.predict(data)[0]
             #変換したデータをモデルに渡して予測する
             predicted = result.argmax()
-            pred_answer = "これは " + classes[predicted] + " です"
+            pred_answer = classes[predicted]
 
 
-            return render_template("index.html",answer=pred_answer)
+            # return render_template("index.html",answer=pred_answer)
+            return render_template("index.html",answer=pred_answer,filepath=filepath)
 
     return render_template("index.html",answer="")
 

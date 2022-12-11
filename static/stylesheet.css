@@ -1,5 +1,5 @@
 header {
-  height: 150px;
+  height: 100px;
   margin: -8px;
   display: flex;
   flex-direction: row-reverse;
@@ -55,7 +55,7 @@ p {
 
 .answer {
   color: #ebc6c6;
-  margin: 70px 0px 30px 0px;
+  margin: 30px 0px 30px 0px;
   text-align: center;
 }
 
@@ -185,7 +185,8 @@ html {
   font-weight: 300;
   font-size: 25px;
   letter-spacing: 10px;
-  margin-top: -30px;
+  margin-top: -40px;
+  margin-bottom: 20px;
 }
 #title span {
   background: -webkit-linear-gradient(white, #38495a);
