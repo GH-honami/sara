@@ -104,27 +104,24 @@ footer {
   height: 80px;
   margin: 0px;
   left: 0px;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+  position: relative;
 }
 
 .footer_img {
   height: 80px;
-  margin: 0px 0px;
+  margin: 0px -10px;
 }
 
 small {
   color: #f0ebeb;
-  margin: 0px 90px;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  bottom: 0px;
+  left: 85px;
 }
 
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
 }
 
 #stars {

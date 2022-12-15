@@ -10,7 +10,7 @@ import numpy as np
 classes = ['!Alert! covered face','Everything is ok']
 image_size = 50
 
-UPLOAD_FOLDER = "uploads"
+UPLOAD_FOLDER = "static/uploads"
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
