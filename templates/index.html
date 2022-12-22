@@ -25,16 +25,14 @@
                 Upload your photos
             </span>
         </div>
-    
-        <!-- <form method="POST" style="margin:30px 0px;", enctype="multipart/form-data">
-          <input type="file" name="file" />
-          <input class="btn" value="submit!" type="submit" />
-        </form> -->
+
         <form method="POST" enctype="multipart/form-data">
-            <input class="file_choose" type="file" name="file">
-            <input class="btn" value="submit!" type="submit">
+            <div id="file_choose_color"> 
+                <input class="file_choose" type="file" name="file">
+                <input class="btn" value="submit!" type="submit">
+            </div>
         </form>
-        <div class="answer">{{answer}}</div>
+        <div class="answer">{{answer}} {{proba}}</div>
         <div class="up_img">
             {% if filepath %}
                 <img class="filepath" src={{filepath}} height="200">
@@ -45,7 +43,7 @@
 
     <footer>
         <img class="footer_img" src="static/images/footer_img.jpg" alt="footer_img">
-        <small>&copy; 2022 Aidemy_Honami</small>   
+        <small>&copy; 2022<br>Aidemy_Honami</small>   
     </footer>
 </body>
 </html>

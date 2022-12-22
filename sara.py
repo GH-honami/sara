@@ -39,19 +39,18 @@ def upload_file():
             #受け取った画像を読み込み、np形式に変換
             img = image.load_img(filepath, grayscale=False, target_size=(image_size, image_size))
             img = image.img_to_array(img)
-
-
             data = np.array([img])
             result = model.predict(data)[0]
             #変換したデータをモデルに渡して予測する
             predicted = result.argmax()
             pred_answer = classes[predicted]
-
-
-            # return render_template("index.html",answer=pred_answer)
-            return render_template("index.html",answer=pred_answer,filepath=filepath)
-
-    return render_template("index.html",answer="")
+            pred_proba = np.round(model.predict(data) *100,decimals=1)
+            pred_proba_str = " ".join(str(i)+"%" for i in pred_proba[0])
+            # return render_template("index.html",answer=pred_answer,filepath=filepath)
+            return render_template("index.html",answer=pred_answer,proba=pred_proba_str,filepath=filepath)
+    
+    else:
+        return render_template("index.html",answer="",proba="")
 
     
 

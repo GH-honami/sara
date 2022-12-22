@@ -30,6 +30,12 @@ height: 50%;
   max-width: 70%;
 }
 
+@media only screen and (max-width: 500px) {
+  #lp-fv {
+    max-width: 80%;
+  }
+  }
+
 .main {
   height: 370px;
   text-align: center;
@@ -72,6 +78,17 @@ form {
 input {
   width: 300px
 }
+
+#file_choose_color {
+  color: #446c6c;
+}
+
+@media only screen and (max-width: 500px) {
+  input {
+    width: 250px
+  }
+  }
+
 input[type="file"]::file-selector-button {
   width: 150px;
   margin-right: 20px;
@@ -105,11 +122,12 @@ footer {
   margin: 0px;
   left: 0px;
   position: relative;
+  
 }
 
 .footer_img {
   height: 80px;
-  margin: 0px -10px;
+  margin: 0px  -10px;
 }
 
 small {
@@ -185,6 +203,13 @@ html {
   margin-top: -40px;
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 500px) {
+  #title {
+    font-size: 19px;
+  }
+  }
+
 #title span {
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
